@@ -2,11 +2,11 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: tybinning43@gmail.com <a href='#'>LinkedIn</a> <a href='#'>Github</a> 
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: TylerBinning.jpg
   image_circular: false # crops the image to make it circular
   address: >
     <p>555 your office number</p>
