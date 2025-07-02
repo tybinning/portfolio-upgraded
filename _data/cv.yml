@@ -2,45 +2,34 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: Tyler Binning
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Bachelors of Science
+      institution: Brigham Young University - Idaho, Rexburg, Idaho
+      year: 2025
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Vice President, Data Science Society
+        - Relevant Coursework- Machine Learning, Big Data Programming, Database Design and Development, Applied Calculus for Data Analysis
+    - title: Dual Enrollment Coursework
+      institution: Southwestern Community College, Osceola, Iowa
+      year: 2022
       description:
-        - Description 1.
-        - Description 2.
+        - Completed college-level coursework in mathematics and general education while attending high school through a dual enrollment program.
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: AI Engineering Consultant
+      institution: Brigham Young University - Idaho
+      year: 2025
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
+        - Collaborated within a team to design and develop an AI-powered Teaching Assistant, integrating generative AI to provide course guidance and answer student questions.  
+        - Integrated course materials into the AI Teaching Assistant using a Retrieval-Augmented Generation (RAG) model, ensuring accurate, context-aware responses to enhance student learning. 
+        - Worked with faculty to refine AI-generated insights, ensuring alignment with academic standards and improving instructional effectiveness. 
+
     - title: Visiting Professor
       institution: California Institute of Technology, Pasadena, California, US
       year: 1933
@@ -68,17 +57,6 @@
       year: 2015-now
       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
-
 - title: Academic Interests
   type: nested_list
   contents:
@@ -91,7 +69,3 @@
         - Description 1.
         - Description 2.
 
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
