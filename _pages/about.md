@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: tybinning43@gmail.com <a href='#'>LinkedIn</a> <a href='#'>Github</a> 
+subtitle: tybinning43@gmail.com <a href='https://www.linkedin.com/in/tyler-r-binning/'>LinkedIn</a> <a href='https://github.com/tybinning'>Github</a> 
 
 profile:
   align: right
