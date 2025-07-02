@@ -7,7 +7,7 @@ subtitle: tybinning43@gmail.com <a href='https://www.linkedin.com/in/tyler-r-bin
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   address: >
     <p>555 your office number</p>
     <p>123 your address street</p>
