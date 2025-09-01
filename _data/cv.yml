@@ -12,7 +12,6 @@
       year: 2025
       description:
         - Vice President, Data Science Society
-        - Relevant Coursework- Machine Learning, Big Data Programming, Database Design and Development, Applied Calculus for Data Analysis
     - title: Dual Enrollment Coursework
       institution: Southwestern Community College, Osceola, Iowa
       year: 2022
@@ -22,6 +21,22 @@
 - title: Experience
   type: time_table
   contents:
+    - title: AI & Operations Optimization Internship
+      institution: TruPorch Homes
+      year: 2025
+      description:
+        - Built automated n8n workflows to scrape competitor pricing and review data, applying sentiment analysis to customer feedback for actionable market insights. 
+        - Integrated competitor intelligence into a Metabase dashboard, enabling real-time comparison of pricing strategies and customer sentiment trends. 
+        - Applied natural language processing (NLP) to classify and quantify review sentiment, informing data-driven decisions in short-term rental pricing. 
+        - Streamlined competitive analysis by connecting multiple data sources into a centralized business intelligence system, reducing manual research time
+    - title: Data Science Internship
+      institution: Planck AI
+      year: 2025
+      description:
+        - Building NLP models with spaCy, including clause tagging and training SpanCat for clause-type recognition 
+        - Applying TF-IDF with Logistic Regression to classify legal contract clauses 
+        - Created a Streamlit interface for uploading and summarizing documents 
+        - Preparing LoRA fine-tuning projects for contract summarization and question answering  
     - title: AI Engineering Consultant
       institution: Brigham Young University - Idaho
       year: 2025
