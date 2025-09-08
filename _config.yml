@@ -120,9 +120,9 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
+blog_name: Hidden Layers # blog_name will be displayed in your blog page
 blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
-blog_description: a simple whitespace theme for academics
+blog_description: This is where I share my exploration of data science and machine learning: from building models and testing algorithms, to uncovering insights that aren’t immediately visible in the raw data. Along the way, I’ll document projects, lessons learned, and practical applications that bridge the gap between theory and real-world impact.
 permalink: /blog/:year/:title/
 
 # Pagination
