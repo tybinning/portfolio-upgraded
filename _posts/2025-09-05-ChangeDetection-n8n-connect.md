@@ -46,7 +46,7 @@ We need to change the
 
 In order to test our webhook connection we need to create a webtracking instance within changdetection.io. We can do this by entering the url of a webpage that we want to monitor, I choose this blog within my portfolio website.
 
-![Change Detection](portfolio-upgraded/assets/img/changedetection-enter-url.png "CHange Detection")
+![Change Detection](assets/img/changedetection-enter-url.png "CHange Detection")
 
 If you click edit and manuever over to the notifications tap, you can enter your webhook address, replacing the `https://` with `json://` this uses AppRise formating, dictating the type the format of data being sent. 
 
