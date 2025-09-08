@@ -48,6 +48,20 @@
         - Worked with faculty to refine AI-generated insights, ensuring alignment with academic standards and improving instructional effectiveness. 
 
 
+- title: Certificates
+  type: time_table
+  contents:
+    - title: Google Advanced Data Analytics Professional Certificate
+      institution: Google
+      year: 2025
+      description:
+        - "Statistical analysis & hypothesis testing: applied inferential statistics, ANOVA, and experimental design for data-driven decision making."
+        - "Regression & predictive modeling: built and evaluated linear/logistic regression, forecasting models, and supervised ML algorithms."
+        - "Machine learning fundamentals: implemented clustering, classification, and ensemble methods in Python."
+        - "Programming in Python: applied pandas, NumPy, scikit-learn, and Jupyter Notebooks for data wrangling, analysis, and modeling."
+        - "Data visualization & storytelling: created effective dashboards and visualizations with Tableau and Python libraries (matplotlib, seaborn)."
+        - "Data wrangling & cleaning: transformed messy datasets into structured, analysis-ready formats."
+
 # - title: Open Source Projects
 #   type: time_table
 #   contents:
