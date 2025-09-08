@@ -26,5 +26,12 @@ The way changedetection works is by itteratively taking a 'snapshot' of the webp
 
 Many websites employ tactics to prevent webscraping, changedetection can aid in the process of circumnavigating these strategies.
 
+# n8n 
+n8n is a useful low-code tool to create workflow automations. Currently for this project we will be using n8n to collect data from changedetection.io modfy the data and display it in a dashboard.
+
+
 # Connection ChangeDetection.io to n8n
+
+In order to connect ChangeDetection.io to n8n we need to add a webhook node to our n8n workflow.
+
 
