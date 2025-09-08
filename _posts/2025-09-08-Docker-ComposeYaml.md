@@ -4,13 +4,15 @@ title: Docker Compose Yaml
 date:   2025-09-08 15:00:21
 description: Something about docker, not sure yet.
 tags: Docker, Docker-Compose.yml, ChangeDetection.io
-categories: Docker, ChangeDetection.io
+categories: Docker
 ---
 
 # Introduction
 We are currently working within a project for the purpose of automating a price website tracking workflow.
 
+We are using changedection.io via a Docker Container Instance. 
 
+We need to incorporate playwright into our changedetection.io docker-compose.yml file.
 
 # Docker
 
@@ -39,6 +41,12 @@ Applications read their configurations upon startup to apply the defined setting
 - **Quotation Marks:** Used to clarify possible confusing with YAML syntax
 - **Key-Value Pairs:** indicated using `key: value`
 - Sequences (arrays): Represented by ```key:\\n - value1 \\n -value2```
+
+**YAML is a superset of JSON**, meaning it contains all the JSON features in addition to added features and commands
+
+**YAML files serve as blueprints** to define sequences of actions and configurations in an easily understandable format
+
+
 
 ## Benefits of Docker Compose YAML
 
