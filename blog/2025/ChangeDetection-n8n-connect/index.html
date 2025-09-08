@@ -177,8 +177,38 @@
 
 <p>Many websites employ tactics to prevent webscraping, changedetection can aid in the process of circumnavigating these strategies.</p>
 
+<h1 id="n8n">n8n</h1>
+<p>n8n is a useful low-code tool to create workflow automations. Currently for this project we will be using n8n to collect data from changedetection.io modfy the data and display it in a dashboard.</p>
+
 <h1 id="connection-changedetectionio-to-n8n">Connection ChangeDetection.io to n8n</h1>
 
+<p>In order to connect ChangeDetection.io to n8n we need to add a webhook node to our n8n workflow.</p>
+
+<p>If you’ll look below you can see an example of the webhook node added into our n8n canvas.</p>
+
+<p><img src="portfolio-upgraded\assets\img\webhook-n8n-node.png" alt="Webhook Node" title="Webhook Node"></p>
+
+<p>When double clicking into the webhook page we should get the following details, that we can adjust.</p>
+
+<p><img src="portfolio-upgraded\assets\img\webhooknode-opened-empty.png" alt="Webhook Node Details" title="Webhook Node"></p>
+
+<p>We need to change the</p>
+
+<p>In order to test our webhook connection we need to create a webtracking instance within changdetection.io. We can do this by entering the url of a webpage that we want to monitor, I choose this blog within my portfolio website.</p>
+
+<p><img src="portfolio-upgraded/assets/img/changedetection-enter-url.png" alt="Change Detection" title="CHange Detection"></p>
+
+<p>If you click edit and manuever over to the notifications tap, you can enter your webhook address, replacing the <code class="language-plaintext highlighter-rouge">https://</code> with <code class="language-plaintext highlighter-rouge">json://</code> this uses AppRise formating, dictating the type the format of data being sent.</p>
+
+<p>As you can tell below the Notification body has a JSON styled structure pairing “changes” with  which gives the values that have been changed. When clicking on ‘show toke/ placeholders’ below the notification text box you can see the different options that you could include within your notification text box.</p>
+
+<p><img src="portfolio-upgraded/assets/img/changedetection-enter-notif.png" alt="Notifications" title="Webhook Node"></p>
+
+<p>Within the notifications tab we can test the webhook by clicking ‘Send test notification’, it is important to node that inorder to recieve the following message in the image below you need to have clicked test within your webhook node in n8n before clicking test within change detection.io.</p>
+
+<p><img src="C:\Users\tybin\OneDrive\Desktop\portfolio-upgraded\assets\img\webhooknode-open-full.png" alt="Webhook Node Testing " title="Webhook Node"></p>
+
+<p>Looking in the body and message schema from our test, you can see the output from the test meaning you have a successful connection.</p>
 
   </article>
 
