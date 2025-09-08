@@ -17,7 +17,7 @@ This is an interesting tool that allows you to track changes in websites. These 
 
 The way changedetection works is by itteratively taking a 'snapshot' of the webpages html format or the javascript and comparing that snapshots differences to the past historical pages to indicate changes.
 
-Many websites employ tactics to prevent webscraping, changedetection can aid in the process of circumnavigating these strategies.
+Many websites employ tactics to prevent webscraping, changedetection can aid in the process of circumnavigating these strategies. Here are some tactics that we can use to circumnavigate these tactics.
 
 ## Internet Proxy Server
 
@@ -28,3 +28,15 @@ Proxy servers allow you to avoid being blocked by executing your scripts through
 Not all sites have static html webpages, actually most have some sort of dynamic features that can make increasingly difficult to scrape. These are often created and displayed using javascript. 
 
 In order to take a 'snapshot' of these more dynamic pages we need to use another tool such as PlayWright.
+
+
+# Headless Browser
+
+A headless browser is a browser that doesn't need a UI as it runs in the background via your terminal.
+Used largely for automating processes.
+
+# CAPTCHA
+
+I'm sure you have experience clicking on a website and all of a sudden it requires you to fill out a CAPTCHA puzzle where you are required to click images that have a bicycle in them or some other item.
+
+There are services that can aid to help with this as well through changedetection.io, however most of these services are paid. 
