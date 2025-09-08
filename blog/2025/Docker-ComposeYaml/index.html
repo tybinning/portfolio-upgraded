@@ -152,13 +152,55 @@
   </header>
 
   <article class="post-content">
-    <h1 id="docker">Docker</h1>
+    <h1 id="introduction">Introduction</h1>
+<p>We are currently working within a project for the purpose of automating a price website tracking workflow.</p>
+
+<h1 id="docker">Docker</h1>
 
 <h2 id="what-is-docker">What is Docker?</h2>
 
-<p><strong>Docker Image</strong>
-<strong>Docker Container</strong>
-<strong>Docker-Compose</strong></p>
+<p><strong>Docker Image:</strong> A packaged folder that includes scripts, configuration files, libraries, and dependancies to run your applicaiton. This makes it easier to share applications for collaborative environments, preventing different dependacies issues that can hinder progress.
+<strong>Docker Container:</strong> A running instance of a docker image. Containers are isolated from each other allowing for a consistent environment.
+<strong>Docker-Compose:</strong> is a tool used for defineing andd running mulit-container applications using Docker. It is a YAML file for configuring applications.</p>
+
+<h2 id="configuration-files">Configuration Files</h2>
+<p>Configuration files are used by software applications to store parameters, settings, and preferences that control their behavior and operation. Allowing for customation of software without requiring changes to the source code.</p>
+
+<p>Applications read their configurations upon startup to apply the defined settings and tailor their behavior accordingly.</p>
+
+<h2 id="yaml-files">YAML Files</h2>
+
+<p><strong>YAML</strong> Stands for YAML Ain’t Markup Language, and is a <strong>human readable</strong> data serialization format for configuration files.</p>
+
+<ul>
+  <li>serves as a format for exchanging data between different programming languages and systems due to simplicity and readability.</li>
+  <li>withing DevOps and Cloud Environments YAML files can be used to define and manage infrastructure resources.</li>
+  <li>Can be used to define API contracts adn specifications.</li>
+</ul>
+
+<h3 id="syntax-and-attributes">Syntax and Attributes</h3>
+<ul>
+  <li>
+<strong>Map (Dictionary):</strong> dictionaries are represented as mappings, a collection of key-value pairs</li>
+  <li>
+<strong>Indentation:</strong> Used to indicate nesting and mapping</li>
+  <li>
+<strong>Quotation Marks:</strong> Used to clarify possible confusing with YAML syntax</li>
+  <li>
+<strong>Key-Value Pairs:</strong> indicated using <code class="language-plaintext highlighter-rouge">key: value</code>
+</li>
+  <li>Sequences (arrays): Represented by <code class="language-plaintext highlighter-rouge">key:\\n - value1 \\n -value2</code>
+</li>
+</ul>
+
+<h2 id="benefits-of-docker-compose-yaml">Benefits of Docker Compose YAML</h2>
+
+<ul>
+  <li>Allows you to easily understand and define multi=containter application configurations simply</li>
+  <li>Allows environmental consistency, ensuring that consistant environments</li>
+  <li>Allows the you to orchestrate teh startu, shutdown, and the interlinking of different containters making managing complex applications easy</li>
+  <li>Ease in scalability</li>
+</ul>
 
   </article>
 
