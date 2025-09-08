@@ -36,7 +36,7 @@ In order to connect ChangeDetection.io to n8n we need to add a webhook node to o
 
 If you'll look below you can see an example of the webhook node added into our n8n canvas.
 
-![Webhook Node](portfolio-upgraded\assets\img\webhook-n8n-node.png "Webhook Node")
+![Webhook Node](webhook-n8n-node.png "Webhook Node")
 
 When double clicking into the webhook page we should get the following details, that we can adjust.
 
