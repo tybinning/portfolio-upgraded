@@ -56,6 +56,6 @@ As you can tell below the Notification body has a JSON styled structure pairing 
 
 Within the notifications tab we can test the webhook by clicking 'Send test notification', it is important to node that inorder to recieve the following message in the image below you need to have clicked test within your webhook node in n8n before clicking test within change detection.io. 
 
-![Webhook Node Testing ](C:\Users\tybin\OneDrive\Desktop\portfolio-upgraded\assets\img\webhooknode-open-full.png "Webhook Node")
+![Webhook Node Testing ](assets/img/webhooknode-open-full.png "Webhook Node")
 
 Looking in the body and message schema from our test, you can see the output from the test meaning you have a successful connection.
