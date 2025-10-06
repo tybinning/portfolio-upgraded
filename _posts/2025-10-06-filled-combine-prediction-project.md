@@ -20,17 +20,20 @@ My project that I want to create will predict when each combine is filled, and w
 There are a variety of variables that can be useful to our model. Heres a few listed out and some of the reasoning behind them:
 
 Factors that can determine speed: 
+
     - Temperature
     - Grain Type
     - Grain Mosture
     - Roughness of terrain
 
 Factors determining course:
+
     - obstactles
     - other combine
     - ditches 
 
 Other Factors:
+
     - head size
     - time since last rain
     - operator
@@ -40,6 +43,7 @@ Other Factors:
     - ratio of field parameter to acres? : could be important in indicating amount of twists and turns for size?
 
 Feild factors:
+
     - roughness of terrain
     - yeild output: a feild that yeilds more will have more fills. 
     - areas of higher output?
@@ -59,6 +63,8 @@ This will be largely a time-series model with a demonstration of how we could ap
 Using GPS streaming data paired with sensors and IoT to determine location, time, and best possible location for the grain cart driver to be, all displayed on a dashboard in the cab of the tractor.
 
 The connection of sensors determining how full, speed, and location would largely increase the predictive applications of this model. However these would take extra capital and organizational cooperation.
+
+# Project Structure/ Outline
 
 
 # Notes
