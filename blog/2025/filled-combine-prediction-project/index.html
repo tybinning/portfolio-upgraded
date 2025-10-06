@@ -10,9 +10,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Avoiding Anti-Webscraping Strategies | Tyler R. Binning</title>
+    <title>Filled Combine Prediction Project | Tyler R. Binning</title>
     <meta name="author" content="Tyler R. Binning">
-    <meta name="description" content="Different Strategies to avoid anti-webscraping strategies within changedetection.io">
+    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -33,7 +34,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%93%8A&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/portfolio-upgraded/assets/css/main.css">
-    <link rel="canonical" href="https://tybinning.github.io/portfolio-upgraded/blog/2025/avoiding-webscraping-tactics/">
+    <link rel="canonical" href="https://tybinning.github.io/portfolio-upgraded/blog/2025/filled-combine-prediction-project/">
     
     <!-- Dark Mode -->
     
@@ -129,63 +130,79 @@
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Avoiding Anti-Webscraping Strategies</h1>
+    <h1 class="post-title">Filled Combine Prediction Project</h1>
     <p class="post-meta">September 8, 2025</p>
     <p class="post-tags">
       <a href="/portfolio-upgraded//blog/2025"> <i class="fas fa-calendar fa-sm"></i> 2025 </a>
         ·  
-        <a href="/portfolio-upgraded//blog/tag/changedetection-io">
-          <i class="fas fa-hashtag fa-sm"></i> ChangeDetection.io,</a>  
-          <a href="/portfolio-upgraded//blog/tag/playwrite">
-          <i class="fas fa-hashtag fa-sm"></i> PlayWrite,</a>  
-          <a href="/portfolio-upgraded//blog/tag/proxy">
-          <i class="fas fa-hashtag fa-sm"></i> Proxy</a>  
-          <a href="/portfolio-upgraded//blog/tag/servers">
-          <i class="fas fa-hashtag fa-sm"></i> Servers</a>  
-          
-        ·  
-        <a href="/portfolio-upgraded//blog/category/web">
-          <i class="fas fa-tag fa-sm"></i> Web</a>  
-          <a href="/portfolio-upgraded//blog/category/scraping">
-          <i class="fas fa-tag fa-sm"></i> Scraping</a>  
+        <a href="/portfolio-upgraded//blog/category/agriculture">
+          <i class="fas fa-tag fa-sm"></i> Agriculture,</a>  
+          <a href="/portfolio-upgraded//blog/category/spatial">
+          <i class="fas fa-tag fa-sm"></i> Spatial,</a>  
+          <a href="/portfolio-upgraded//blog/category/time-series">
+          <i class="fas fa-tag fa-sm"></i> Time-Series</a>  
           
 
     </p>
   </header>
 
   <article class="post-content">
-    <h1 id="introduction">Introduction</h1>
+    <h1 id="predicting-combine-filled-times">Predicting Combine Filled Times</h1>
 
-<h1 id="changedetectionio">ChangeDetection.io</h1>
+<h1 id="introduction">Introduction</h1>
 
-<p>ChangeDetection.io is an application that you can install as a docker image, and run as a container allowing you to use the application within your browser via localhost.</p>
+<p>Due to a number of factors I’ve had the oppurtunity to work with my family during harvest this fall. My primary task is to drive the grain cart. For those of you that don’t know, the grain cart driver is tasked with driving a tractor attacted to the grain cart running back and forth collecting grain from each combine and unloading the grain into the semi-truck by the field entrance. The primary purpose of this job is to allow the combine opperators to use their time as efficient as possible collecting grain from the field. If you weren’t using a grain cart, a majority of your time would be spent in transportation to and filling the semi-truck.</p>
 
-<p>This is an interesting tool that allows you to track changes in websites. These changes that we are tracking are often for the purpose of tracking price changes or new news headlines etc.</p>
+<p>In our family opperation we currently use two combines to speed things up. Running back and forth from the semi to either combine often feels as though the timing is mismatched. By the time I am filled and unloaded, the other combine already seems to be waiting on me. Another common problem is attempting to determine where I need to be to unload the combine at a particular time, this can cause logistical issues as often times their are obstacles preventing from traveling different paths.</p>
 
-<p>The way changedetection works is by itteratively taking a ‘snapshot’ of the webpages html format or the javascript and comparing that snapshots differences to the past historical pages to indicate changes.</p>
+<p>My project that I want to create will predict when each combine is filled, and where the combine will be when it is filled.</p>
 
-<p>Many websites employ tactics to prevent webscraping, changedetection can aid in the process of circumnavigating these strategies. Here are some tactics that we can use to circumnavigate these tactics.</p>
+<p>There are a variety of variables that can be useful to our model. Heres a few listed out and some of the reasoning behind them:</p>
 
-<h2 id="internet-proxy-server">Internet Proxy Server</h2>
+<p>Factors that can determine speed: 
+    - Temperature
+    - Grain Type
+    - Grain Mosture
+    - Roughness of terrain</p>
 
-<p>Proxy servers allow you to avoid being blocked by executing your scripts through a different IP address. Your IP address is a unique address assigned to your computer. If a site realize that your computer was accessing their page every 30 seconds for the last 10 days their is a strong likelihood that the site will think you’re a bot. Going through a proxie/ different IP address it makes it harder to deterine.</p>
+<p>Factors determining course:
+    - obstactles
+    - other combine
+    - ditches</p>
 
-<h2 id="playwright">PlayWright</h2>
+<p>Other Factors:
+    - head size
+    - time since last rain
+    - operator
+    - time since last fill
+    - outliers: Ex. ( breaking down, lunch breaks?, funerals, rain, etc. )
+    - direction/ which side will the auger be on?
+    - ratio of field parameter to acres? : could be important in indicating amount of twists and turns for size?</p>
 
-<p>Not all sites have static html webpages, actually most have some sort of dynamic features that can make increasingly difficult to scrape. These are often created and displayed using javascript.</p>
+<p>Feild factors:
+    - roughness of terrain
+    - yeild output: a feild that yeilds more will have more fills. 
+    - areas of higher output?</p>
 
-<p>In order to take a ‘snapshot’ of these more dynamic pages we need to use another tool such as PlayWright.</p>
+<h1 id="realistic-expectations-of-project">Realistic expectations of Project</h1>
 
-<h1 id="headless-browser">Headless Browser</h1>
+<p>This project is going to be largerly used/ predicted on simulated data. The reason for this is to create a basic model/ and idea on how we could formulate this with gps data and tracking other indicators.</p>
 
-<p>A headless browser is a browser that doesn’t need a UI as it runs in the background via your terminal.
-Used largely for automating processes.</p>
+<p>Currently the capital to purchase and building these connections is lacking. We need to create a proof of concept before determining whether continuing this project may be worth it.</p>
 
-<h1 id="captcha">CAPTCHA</h1>
+<p>However our goal is to create a model that can predict the a general spatial location on a map based off a form of time-series model that determines when each combine will fill up. We can track all of our conditions, time to fill as well as our fields that we are at farely easy. However the locations/ pattern of the combines and speeds maybe a little harder to determine. We can ask the combine opperator their speeds.</p>
 
-<p>I’m sure you have experience clicking on a website and all of a sudden it requires you to fill out a CAPTCHA puzzle where you are required to click images that have a bicycle in them or some other item.</p>
+<p>This will be largely a time-series model with a demonstration of how we could apply that model to a spatial model with predicting a predefined path.</p>
 
-<p>There are services that can aid to help with this as well through changedetection.io, however most of these services are paid.</p>
+<h1 id="unrealistic-applications-expections">Unrealistic Applications/ Expections</h1>
+
+<p>Using GPS streaming data paired with sensors and IoT to determine location, time, and best possible location for the grain cart driver to be, all displayed on a dashboard in the cab of the tractor.</p>
+
+<p>The connection of sensors determining how full, speed, and location would largely increase the predictive applications of this model. However these would take extra capital and organizational cooperation.</p>
+
+<h1 id="notes">Notes</h1>
+
+<p>I’m excted for this project as I believe that it will display a connection of passion, usefulness, and uniqueness connecting to my roots.</p>
 
   </article>
 
@@ -221,13 +238,13 @@ Used largely for automating processes.</p>
   
 
   <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/portfolio-upgraded//blog/2025/filled-combine-prediction-project/">Filled Combine Prediction Project</a>
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/portfolio-upgraded//blog/2025/LangChainRAG/">Building a RAG Pipeline with LangChain</a>
   </li>
 
   
 
   <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/portfolio-upgraded//blog/2025/LangChainRAG/">Building a RAG Pipeline with LangChain</a>
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/portfolio-upgraded//blog/2025/avoiding-webscraping-tactics/">Avoiding Anti-Webscraping Strategies</a>
   </li>
 
 </div>
