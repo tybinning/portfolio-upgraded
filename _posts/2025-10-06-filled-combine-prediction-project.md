@@ -1,13 +1,11 @@
 ---
 layout: post
-title: Predicting Combine Fill Times
+title: Predicting Combine Hopper Fill Times
 date:   2025-09-08 12:00:21
 description: 
 tags: Agriculture, Spatial, Time-Series
 categories: Agriculture, Spatial, Time-Series
 ---
-
-# Predicting Combine Filled Times
 
 # Introduction
 
