@@ -9,6 +9,9 @@ categories: AI, RAG
 
 # Introduction
 
+# Important Links
+
+- [Advanced RAG on Hugging Face documentation using LangChain]("https://huggingface.co/learn/cookbook/en/advanced_rag")
 
 # RAG
 
