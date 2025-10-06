@@ -40,7 +40,7 @@ Other Factors:
     - direction/ which side will the auger be on?
     - ratio of field parameter to acres? : could be important in indicating amount of twists and turns for size?
 
-Feild factors:
+Field factors:
 
     - roughness of terrain
     - yeild output: a feild that yeilds more will have more fills. 
