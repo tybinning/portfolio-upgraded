@@ -19,32 +19,32 @@ There are a variety of variables that can be useful to our model. Heres a few li
 
 Factors that can determine speed: 
 
-    - Temperature
-    - Grain Type
-    - Grain Mosture
-    - Roughness of terrain
+- Temperature
+- Grain Type
+- Grain Mosture
+- Roughness of terrain
 
 Factors determining course:
 
-    - obstactles
-    - other combine
-    - ditches 
+- obstactles
+- other combine
+- ditches 
 
 Other Factors:
 
-    - head size
-    - time since last rain
-    - operator
-    - time since last fill
-    - outliers: Ex. ( breaking down, lunch breaks?, funerals, rain, etc. )
-    - direction/ which side will the auger be on?
-    - ratio of field parameter to acres? : could be important in indicating amount of twists and turns for size?
+- head size
+- time since last rain
+- operator
+- time since last fill
+- outliers: Ex. ( breaking down, lunch breaks?, funerals, rain, etc. )
+- direction/ which side will the auger be on?
+- ratio of field parameter to acres? : could be important in indicating amount of twists and turns for size?
 
 Field factors:
 
-    - roughness of terrain
-    - yeild output: a feild that yeilds more will have more fills. 
-    - areas of higher output?
+- roughness of terrain
+- yeild output: a feild that yeilds more will have more fills. 
+- areas of higher output?
 
 # Realistic expectations of Project
 
