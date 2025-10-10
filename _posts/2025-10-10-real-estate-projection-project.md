@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Real Estate Price Prediction
-date:   2025-09-08 12:00:21
+date:   2025-10-10 12:00:21
 description: 
 tags: Real Estate, Spatial, Time-Series, Prediction
 categories: Real Estate, Spatial, Time-Series
