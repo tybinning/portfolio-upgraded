@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Real Estate Price Prediction
+title: Real Estate Price Prediction Project Discription
 date:   2025-10-10 12:00:21
 description: 
 tags: Real Estate, Spatial, Time-Series, Prediction
@@ -25,4 +25,9 @@ There are a multiple concerns of uncertainty within this strategy:
 - Monte Carlo Simulation Variables
     - There will be tons of variables to randomize, however the distributions of these different values will need to be based on past data, this could be rather difficult for different variables
     - Important Variables within Real Estate market:
+        - Macro Economic Indicators
+        - Local Housing Prices
+        - Location
+        - House Features
+        - Consumer Sentiment
         - 
