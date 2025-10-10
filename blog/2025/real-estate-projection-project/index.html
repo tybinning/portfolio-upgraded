@@ -10,9 +10,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Avoiding Anti-Webscraping Strategies | Tyler R. Binning</title>
+    <title>Real Estate Price Prediction | Tyler R. Binning</title>
     <meta name="author" content="Tyler R. Binning">
-    <meta name="description" content="Different Strategies to avoid anti-webscraping strategies within changedetection.io">
+    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -33,7 +34,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%93%8A&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/portfolio-upgraded/assets/css/main.css">
-    <link rel="canonical" href="https://tybinning.github.io/portfolio-upgraded/blog/2025/avoiding-webscraping-tactics/">
+    <link rel="canonical" href="https://tybinning.github.io/portfolio-upgraded/blog/2025/real-estate-projection-project/">
     
     <!-- Dark Mode -->
     
@@ -129,25 +130,31 @@
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Avoiding Anti-Webscraping Strategies</h1>
+    <h1 class="post-title">Real Estate Price Prediction</h1>
     <p class="post-meta">September 8, 2025</p>
     <p class="post-tags">
       <a href="/portfolio-upgraded//blog/2025"> <i class="fas fa-calendar fa-sm"></i> 2025 </a>
         ·  
-        <a href="/portfolio-upgraded//blog/tag/changedetection-io">
-          <i class="fas fa-hashtag fa-sm"></i> ChangeDetection.io,</a>  
-          <a href="/portfolio-upgraded//blog/tag/playwrite">
-          <i class="fas fa-hashtag fa-sm"></i> PlayWrite,</a>  
-          <a href="/portfolio-upgraded//blog/tag/proxy">
-          <i class="fas fa-hashtag fa-sm"></i> Proxy</a>  
-          <a href="/portfolio-upgraded//blog/tag/servers">
-          <i class="fas fa-hashtag fa-sm"></i> Servers</a>  
+        <a href="/portfolio-upgraded//blog/tag/real">
+          <i class="fas fa-hashtag fa-sm"></i> Real</a>  
+          <a href="/portfolio-upgraded//blog/tag/estate">
+          <i class="fas fa-hashtag fa-sm"></i> Estate,</a>  
+          <a href="/portfolio-upgraded//blog/tag/spatial">
+          <i class="fas fa-hashtag fa-sm"></i> Spatial,</a>  
+          <a href="/portfolio-upgraded//blog/tag/time-series">
+          <i class="fas fa-hashtag fa-sm"></i> Time-Series,</a>  
+          <a href="/portfolio-upgraded//blog/tag/prediction">
+          <i class="fas fa-hashtag fa-sm"></i> Prediction</a>  
           
         ·  
-        <a href="/portfolio-upgraded//blog/category/web">
-          <i class="fas fa-tag fa-sm"></i> Web</a>  
-          <a href="/portfolio-upgraded//blog/category/scraping">
-          <i class="fas fa-tag fa-sm"></i> Scraping</a>  
+        <a href="/portfolio-upgraded//blog/category/real">
+          <i class="fas fa-tag fa-sm"></i> Real</a>  
+          <a href="/portfolio-upgraded//blog/category/estate">
+          <i class="fas fa-tag fa-sm"></i> Estate,</a>  
+          <a href="/portfolio-upgraded//blog/category/spatial">
+          <i class="fas fa-tag fa-sm"></i> Spatial,</a>  
+          <a href="/portfolio-upgraded//blog/category/time-series">
+          <i class="fas fa-tag fa-sm"></i> Time-Series</a>  
           
 
     </p>
@@ -156,36 +163,44 @@
   <article class="post-content">
     <h1 id="introduction">Introduction</h1>
 
-<h1 id="changedetectionio">ChangeDetection.io</h1>
+<p>I have been interesting in Real Estate investing, there is a strategy in real estate investing that combines multiple strategies. Here’s how it works, you buy a property, flip it (repair damages), rent the property out for five years, after 5 years sell and move on to the next property.</p>
 
-<p>ChangeDetection.io is an application that you can install as a docker image, and run as a container allowing you to use the application within your browser via localhost.</p>
+<p>There are a multiple concerns of uncertainty within this strategy:</p>
 
-<p>This is an interesting tool that allows you to track changes in websites. These changes that we are tracking are often for the purpose of tracking price changes or new news headlines etc.</p>
-
-<p>The way changedetection works is by itteratively taking a ‘snapshot’ of the webpages html format or the javascript and comparing that snapshots differences to the past historical pages to indicate changes.</p>
-
-<p>Many websites employ tactics to prevent webscraping, changedetection can aid in the process of circumnavigating these strategies. Here are some tactics that we can use to circumnavigate these tactics.</p>
-
-<h2 id="internet-proxy-server">Internet Proxy Server</h2>
-
-<p>Proxy servers allow you to avoid being blocked by executing your scripts through a different IP address. Your IP address is a unique address assigned to your computer. If a site realize that your computer was accessing their page every 30 seconds for the last 10 days their is a strong likelihood that the site will think you’re a bot. Going through a proxie/ different IP address it makes it harder to deterine.</p>
-
-<h2 id="playwright">PlayWright</h2>
-
-<p>Not all sites have static html webpages, actually most have some sort of dynamic features that can make increasingly difficult to scrape. These are often created and displayed using javascript.</p>
-
-<p>In order to take a ‘snapshot’ of these more dynamic pages we need to use another tool such as PlayWright.</p>
-
-<h1 id="headless-browser">Headless Browser</h1>
-
-<p>A headless browser is a browser that doesn’t need a UI as it runs in the background via your terminal.
-Used largely for automating processes.</p>
-
-<h1 id="captcha">CAPTCHA</h1>
-
-<p>I’m sure you have experience clicking on a website and all of a sudden it requires you to fill out a CAPTCHA puzzle where you are required to click images that have a bicycle in them or some other item.</p>
-
-<p>There are services that can aid to help with this as well through changedetection.io, however most of these services are paid.</p>
+<ul>
+  <li>How much can you expect to charge for rent after rennovating the property?
+    <ul>
+      <li>What improvements generate the highest change in rent?</li>
+      <li>What are people willing to rent in certain spatial areas? (Is there a price cap? -&gt; this could limit your renivations.)</li>
+      <li>How does our rent prices compare to competitors in the area?</li>
+    </ul>
+  </li>
+  <li>How will the properties value change in five year or at the point you plan on selling?
+    <ul>
+      <li>What economic changes can cause the prices to change?</li>
+    </ul>
+  </li>
+  <li>How do I choose the right property ?
+    <ul>
+      <li>How do I know the property will be profitable?
+        <ul>
+          <li>Create a Monte Carlo simulation to give a probability distribution of profitability</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Monte Carlo Simulation Variables
+    <ul>
+      <li>There will be tons of variables to randomize, however the distributions of these different values will need to be based on past data, this could be rather difficult for different variables</li>
+      <li>Important Variables within Real Estate market:
+        <ul>
+          <li>
+        </li>
+</ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
   </article>
 
@@ -221,13 +236,13 @@ Used largely for automating processes.</p>
   
 
   <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/portfolio-upgraded//blog/2025/real-estate-projection-project/">Real Estate Price Prediction</a>
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/portfolio-upgraded//blog/2025/filled-combine-prediction-project/">Predicting Combine Hopper Fill Times</a>
   </li>
 
   
 
   <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/portfolio-upgraded//blog/2025/filled-combine-prediction-project/">Predicting Combine Hopper Fill Times</a>
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/portfolio-upgraded//blog/2025/LangChainRAG/">Building a RAG Pipeline with LangChain</a>
   </li>
 
 </div>
