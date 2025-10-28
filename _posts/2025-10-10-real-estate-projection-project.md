@@ -30,4 +30,4 @@ There are a multiple concerns of uncertainty within this strategy:
         - Location
         - House Features
         - Consumer Sentiment
-        - 
+
