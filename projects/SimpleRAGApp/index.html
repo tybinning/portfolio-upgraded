@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Simple Streamlit Document RAG App | Tyler R. Binning</title>
+    <title>Simple RAG App | Tyler R. Binning</title>
     <meta name="author" content="Tyler R. Binning">
     <meta name="description" content="Allows users to upload PDF's and ask the chatbot a question about the document.">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
@@ -111,14 +111,14 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Simple Streamlit Document RAG App</h1>
+            <h1 class="post-title">Simple RAG App</h1>
             <p class="post-description">Allows users to upload PDF's and ask the chatbot a question about the document.</p>
           </header>
 
           <article>
             <h1 id="introduction">Introduction</h1>
 
-<p>I wanted to build a simple streamlit app that allows me to upload academic pdf’s and lets me ask questions about them. However I didn’t want to ask a question about one topic and have the RAG pull information from unrelated documents.</p>
+<p>I wanted to build a simple streamlit app that allows me to upload documents in PDF form and allows me to ask questions about them. However I didn’t want to ask a question about one topic and have the RAG pull information from unrelated documents.</p>
 
 <p>Below you can see our simple streamlit app that allows you to discuss different documents that are uploaded.</p>
 
@@ -160,6 +160,11 @@
 <p>For our chatbot I decided to use Mistral mainly because this model is open source and provides comparively better conversation styled answers.</p>
 
 <p>For our RAG I used Chroma to build our vector database, when uploading a document our app adds metadata to the chunks detailing the files location within our folders. This allows us to dictate our similarity search by using the filter parameter to limit the documents reviewed.</p>
+
+<h2 id="streamlit-app">Streamlit App</h2>
+<p>Inorder to create a MVP I used Streamlit which allows for the creation of simple application within python.</p>
+
+<p>This allowed for more focus on our model, retreive augemented generation pipeline structure, and simple interface formatting.</p>
 
 <h2 id="rag">RAG</h2>
 
