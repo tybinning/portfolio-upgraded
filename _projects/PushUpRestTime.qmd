@@ -1,0 +1,469 @@
+---
+title: "Push Up Rest Time Challenge"
+format:
+  html:
+    self-contained: true
+    code-fold: true
+editor: visual
+theme: cerulean
+---
+
+## Introduction
+
+I have been involved in athletics most of my life, whether it was Football, Wrestling, Track, or Baseball I've been involved.
+
+Through my experiences I've noticed that in different sports there are varying options of the best ways to workout and condition. Within the fitness industry there seems to be a lot of contradicting opinions on many topics. One of these topics happens to be rest time between sets.
+
+In this experiment we are going to be testing how many push ups can be done with varying rest times between sets.
+
+Our **Response Variable** will be measuring the decrease in pushups able to be done in a percentage for better camparability.
+
+For this experiment we will be **Blocking by each participant** to get rid of any "nuisance" variables.
+
+Our **Factors levels will be rest time** between sets. We will be using the specified different rest times below:
+
+-   30 seconds
+-   1 minute
+-   2 minutes
+
+### Model
+
+$$
+y_{ij} = \mu + \alpha_{i} + \beta_{j} + \epsilon_{ij}
+$$ Where:
+
+-   $y_{ij}$ : observed value
+-   $\mu$ : Grand Mean
+-   $\alpha_{i}$ : effect of rest period, and $i$ goes from 1 to 3 since we are using 3 different rest periods (30 sec, 1 min, 2 min)
+-   $\beta_{j}$ : is the effect of the participant,$j$ goes from 1 to 5 since there are 5 participants in the study
+-   $\epsilon_{ij}$ : is the residual error
+
+### Hypothesis
+
+Our null and alternative hypotheses for the affect of **rest time** on percent decrease from set 1 to set 3:
+
+Writen Form:
+
+$$
+H_0: \text{Each "rest time" factor has an affect of 0}
+$$
+
+$$
+H_a: \text{At least one of the "rest times" factor affects is different from 0 }
+$$
+
+Algebraic Form:
+
+$$
+H_0:\alpha_i = 0 \text{ for all } i
+$$
+
+$$
+H_a:\alpha_i \neq 0 \text{ for some }i
+$$
+
+We will use a significance level of $\alpha = 0.05$.
+
+## Methodology
+
+In order to complete this experiment you will need BYU-I approved shorts and shirt for uniformity, this experiment will be taking place in my apartment gym at 6:00 pm Mst time for day of the experiment.
+
+This is to keep the environment relatively the same, as well as the clothing our participants are wearing.
+
+I will be using 5 different participants to complete this study. This experiment will take place over five days. We will perform the experiment three times on each participant. There will only be one experiment per individual per day, with a day in between each experiment for proper recovery.
+
+For this experiment we will be blocking by each participant to get rid of any "nuisance" variables.
+
+The different rest times will be randomly ordered for each individual as to prevent any order effects. To refresh, our rest times are listed:
+
+-   30 seconds
+-   1 minute
+-   2 minutes
+
+Before each experiment each individual will perform a standardized warm up consisting of 20 jumping jacks, this is important as it will get their blood flowing and warm their muscles up for the activity.
+
+To perform the actual experiment each individual will perform three sets of push ups until failure.
+
+Participants will:
+
+-   Complete the first set
+-   Take their designated rest time (30 sec, 1 min, or 2 min)
+-   then execute their second set
+-   rest again and perform their third and final set
+
+Through this experiment we will track the number of push ups completed at each set. To calculate our response variable we will take the percent difference from the first set to the second set.
+
+We chose to measure the percent difference as to standardize the measurement of performance decline across participants with varying initial push up amounts.
+
+This metric will be calculated as:
+
+$$
+\text{Percent Decline} = {{\text{Set 1 Push-ups } - \text{Set 3 Push-ups}}\over{\text{Set 1 Push-Ups}}} \text{ x }100
+$$
+
+### Other Information About the Study
+
+It is important to note that getting people to do excessive amounts of push ups can be challenging. Saying that there will be some bias. I was able to get friends and roommates participate.
+
+All of the participants in this study were Males ranging from ages 20 - 22.
+
+### Randomization
+
+After I had gotten my volunteers I randomized the order by rest time for each idividual.
+
+This was done through using R code. In a similar fashon as the code block below:
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+ParticipantID <- rep(1:5, each = 3)
+resttime <- rep(c("30 sec", "1 min", "2 min"), times=5)
+order <- rep(1:3, times=5)
+#longer <- tibble(ParticipantID, resttime, order)
+#pander(longer)
+
+tibble(ParticipantID, resttime) %>% #This puts the two columns together
+  group_by(ParticipantID) %>% #randomize within each participant
+  slice_sample(n = 3) %>% #shuffle the Brushes
+  bind_cols(Order = rep(1:3, times = 5))
+```
+
+From here the order was taken and put into a excel workbook, where I was able to better display and collect data on my participants.
+
+An important aspect to note it that this was randomized so the output above does not have the same order as the data used in this experiment.
+
+## Data
+
+```{r, message=FALSE, warning=FALSE}
+library(readr)
+library(tidyverse)
+library(pander)
+library(car)
+push <- read_csv("PushUpExperiment.csv") %>%
+  mutate(
+    participant = case_when(
+      participant == "Tyler" ~ "Participant 1", 
+      participant == "Brayden" ~ "Participant 2", 
+      participant == "David" ~ "Participant 3", 
+      participant == "David 2" ~ "Participant 4", 
+      participant == "Hayden" ~ "Participant 5"
+      
+    )
+  )
+
+push2 <- push %>%
+  mutate(
+    set1to2 = - round(((`set 2` - `set 1` )/`set 1`)*100, 2), 
+    set2to3 = - round(((`set 3` - `set 2` )/`set 2`)*100, 2), 
+    set1to3 = - round(((`set 3` - `set 1` )/`set 1`)*100, 2)
+    
+  )
+```
+
+## Summary Stats
+
+These statistics represent the the percentage decrease from set 1 to set 3.
+
+**Participant Summary Stat Table**
+
+```{r, message=FALSE, warning=FALSE}
+partic_stats <- push2 %>%
+  group_by(participant) %>%
+  summarise(
+    min = min(set1to3),  
+    Q1 = quantile(set1to3, 0.25), 
+    median = median(set1to3), 
+    mean = mean(set1to3),
+    Q3 = quantile(set1to3, 0.75), 
+    max = max(set1to3), 
+    sd = sd(set1to3), 
+    n = n()
+  )
+pander(partic_stats)
+```
+
+**Rest Time Summary Stat Table**
+
+```{r, message=FALSE, warning=FALSE}
+partic_stats <- push2 %>%
+  group_by(`rest time`) %>%
+  summarise(
+    min = min(set1to3),  
+    Q1 = quantile(set1to3, 0.25), 
+    median = median(set1to3), 
+    mean = mean(set1to3),
+    Q3 = quantile(set1to3, 0.75), 
+    max = max(set1to3), 
+    sd = sd(set1to3), 
+    n = n()
+  )
+pander(partic_stats)
+```
+
+## Exploration
+
+```{r, message=FALSE, warning=FALSE}
+pivoted <- push %>% 
+  pivot_longer(cols=c(`set 1`, `set 2`, `set 3`), 
+               names_to='set', 
+               values_to='reps') %>%
+  mutate(
+    set = case_when(
+      set == "set 1" ~ "First",
+      set == "set 2" ~ "Second", 
+      set == "set 3" ~ "Third"
+    ), 
+    `rest time` = case_when(
+      `rest time` == "30 sec" ~ "30 Seconds", 
+      `rest time` == "1 min" ~ "1 Minute",
+      `rest time` == "2 min" ~ "2 Minutes"
+    )
+  )
+pivoted$`rest time` <- factor(pivoted$`rest time`, levels=c("30 Seconds", "1 Minute", "2 Minutes") )
+
+ggplot(pivoted, aes(x=set, color=participant, group=participant, y=reps))+
+  geom_line(size = 1.15) + 
+  geom_point(size= 3) +
+  facet_wrap(~`rest time`) + 
+  labs(
+    title="Participants Progression Through Each Set", 
+    y="Repitions of Pushups", 
+    x="Set", 
+    color="Participants"
+  )+
+  theme_minimal() + 
+  scale_colour_manual(values = c(
+    "Participant 1" = "aquamarine2", 
+    "Participant 2" = "deepskyblue2", 
+    "Participant 3" = "deeppink2", 
+    "Participant 4" = "darkorchid2", 
+    "Participant 5" = "darkorchid4"
+  )) + 
+  theme(
+    axis.line.x = element_line(color="grey", size=1.5)
+  )
+
+```
+
+The plot above demonstrates the path of completed reps for each set, within the different rest time intervals. An interesting aspect to note is that participant 4 seems to be astronomically more fit than the rest of the participants, either that or there was a lack of proper form within completing the exercise.
+
+This is one of the reasons blocking is important within this situation. Rather than correcting participant 4's form, I made sure it was consistent through out the experiment.
+
+Other than participant 4's performance the rest of the participants within the study seem to be relatively grouped close together.
+
+```{r, message=FALSE, warning=FALSE}
+
+
+pivoted2 <- push2 %>%
+  select(-c(`set 1`, `set 2`, `set 3`)) %>%
+  pivot_longer(
+    cols= c(set1to2, set2to3, set1to3), 
+    names_to= "Movement",
+    values_to = "Percent"
+  )%>%
+  mutate(
+    `rest time` = case_when(
+      `rest time` == "30 sec" ~ "30 Seconds", 
+      `rest time` == "1 min" ~ "1 Minute",
+      `rest time` == "2 min" ~ "2 Minutes"
+    ), 
+    Movement = case_when(
+      Movement == "set1to2" ~ "From Set 1 to 2", 
+      Movement == "set2to3" ~ "From Set 2 to 3",  
+      Movement == "set1to3" ~ "From Set 1 to 3"
+    )
+  )
+pivoted2$`rest time` <- factor(pivoted2$`rest time`, levels=c("30 Seconds", "1 Minute", "2 Minutes") )
+
+ggplot(pivoted2 %>% filter(Movement != "From Set 1 to 3"), aes(x= `rest time`, y=Percent, color=`rest time`)) + 
+  geom_point(size= 2) + 
+  stat_summary(fun= mean, geom="line", aes(group=1), size=1, color="black", alpha= 0.3)+
+  stat_summary(fun= mean, geom="point", aes(group=1), size=2, color="black", alpha= 0.3)+
+  facet_wrap(~Movement) + 
+  theme_minimal() +
+  labs(
+    title="Decrease Between Sets", 
+    x="Rest Time", 
+    y="Percent Decrease (%)", 
+    color= "Rest Time"
+  ) + 
+  scale_color_manual(values = c(
+    "30 Seconds" = "deepskyblue2", 
+    "1 Minute" = "deeppink2", 
+    "2 Minutes" = "darkorchid2"
+  )) +
+  geom_hline(yintercept = 0, color="grey", size=2) + 
+  theme(legend.position = "none")
+
+
+```
+
+As our main focus is looking at the percent decreased from set to set, I found this graph appearing to be insightful. I have created a grey line that moves from the averages of each `rest time` interval. You can see that in the "From Set 1 to Set 2" facet of the chart on the left, the average percent decrease, decreases moving left to right. This demonstrates that there appears to be less of a decrease from set 1 to set 2 for the longer rest time.
+
+In the right facet of the chart we can see the "From set 2 to set 3" percentage decreases. Interestingly enough our average line seems to increase as the rest times get longer.
+
+If we look back up at our progression chart, we can see that the longer the rest time the more push ups that the individual seemed to be able to do. Saying this, it allowed for a larger decrease from set 2 to 3.
+
+```{r, message=FALSE, warning=FALSE}
+ggplot(pivoted2 %>% filter(Movement == "From Set 1 to 3"), aes(x= `rest time`, y=Percent, color=`rest time`)) + 
+  geom_point(size= 2) + 
+  stat_summary(fun= mean, geom="line", aes(group=1), size=1, color="black", alpha= 0.3)+
+  stat_summary(fun= mean, geom="point", aes(group=1), size=2, color="black", alpha= 0.3)+
+  facet_wrap(~Movement) + 
+  theme_minimal() +
+  labs(
+    title="Decrease Between Sets", 
+    x="Rest Time", 
+    y="Percent Decrease (%)", 
+    color= "Rest Time"
+  ) + 
+  scale_color_manual(values = c(
+    "30 Seconds" = "deepskyblue2", 
+    "1 Minute" = "deeppink2", 
+    "2 Minutes" = "darkorchid2"
+  )) + 
+  theme(legend.position = "none")
+```
+
+Looking at our chart above it does appear that there is a slight difference from our decrease percentage from the different rest intervals. As well as a difference in spread as we move from shorter to longer rest times.
+
+Looking at the visuals there appears to be a bit of a difference, so lets see if there's a significant difference.
+
+## Analysis of Variance
+
+```{r, message=FALSE, warning=FALSE}
+pushaov <- aov(`set1to3` ~ participant + `rest time`, data=push2)
+pander(summary(pushaov))
+```
+
+We decided to stick with the Type I Sum of Squares as our dataset is balanced and doesn't require a Type III Sum of Squares to compensate for lack of balance.
+
+It appears by our anova test that rest time doesn't make a significant difference on the percentage decrease from the first set to the last set. As we have a p-value of $0.4296$ proving that we have insufficient evidence to conclude that rest time affects the percent decrease.
+
+An aspect to note is that the participant p-value has a value of $0.1533$ which is lower and more significant than the rest time in comparison but still not significant.
+
+## Assumptions
+
+```{r, message=FALSE, warning=FALSE}
+par(mfrow=c(1,3))
+plot(pushaov, which=1)
+car::qqPlot(pushaov$residuals)
+plot(pushaov$residuals)
+```
+
+**Constant Variance** : The constant variance assumption is demonstrated by the "Residuals vs Fitted" graph on the left. Looking at this chart we can see that there is a slight forming of a wedge, but for this experiment we are going to deem this as acceptable.
+
+**Normality** : The Normality of our residuals is demonstrated in the middle plot. We are looking for values sitting outside of the band to reject the normality. There are no points sitting outside of the band so this assumption of normality is met.
+
+**Ordered plot** : The ordered plot on the left we are trying to determine if there is a trend of some sort, it seems to be randomized.
+
+## Further Analysis
+
+After looking through some of our visualizations and summaries I am more curious now in the percentage changes from the individual sets. When we look at our dotplots above demonstrating the percent change from set 1 to set 2 as well as from set 2 to 3 there seems to be a stronger relationship between the rest times and percent dropped.
+
+### Set 1 to 2 Analysis of Variance
+
+#### Hypothesis
+
+Our null and alternative hypotheses for the affect of **rest time** on percent decrease from set 1 to set 2:
+
+$$
+H_0:\alpha_i = 0 \text{ for all } i
+$$
+
+$$
+H_a:\alpha_i \neq 0 \text{ for some }i
+$$
+
+We were able to calculate the percent decrease by the following equation:
+
+$$
+\text{Percent Decline} = {{\text{Set 1 Push-ups } - \text{Set 2 Push-ups}}\over{\text{Set 1 Push-Ups}}} \text{ x }100
+$$
+
+```{r, warning=FALSE, message=FALSE}
+pushaov1 <- aov(`set1to2` ~ participant + `rest time`, data=push2)
+pander(summary(pushaov1))
+```
+
+Interesting enough the rest time factor for **set1to2** has a far more significant p-value than our **set1to3** column. However the p-value still isn't significant. So we have insufficient evidence to reject the null hypothesis that the percentage decrease is the same for each rest time. Looking at our block (particpant) it still apears to be insignificant.
+
+#### Assumptions
+
+```{r, warning=FALSE, message=FALSE}
+par(mfrow=c(1,3))
+plot(pushaov1, which=1)
+car::qqPlot(pushaov1$residuals)
+plot(pushaov1$residuals)
+```
+
+**Constant Variance** : The constant variance assumption is demonstrated by the "Residuals vs Fitted" graph on the left. There doesn't seem to be a megaphone, wedge, or really any other pattern so we can say that our assumption of constant variance is met.
+
+**Normality** : The Normality of our residuals is demonstrated in the middle plot. We are looking for values sitting outside of the band to reject the normality. There are no points sitting outside of the band so this assumption of normality is met.
+
+**Ordered plot** : The ordered plot on the left we are trying to determine if there is a trend of some sort, it seems to be randomized.
+
+### Set 2 to 3 Analysis of Variance
+
+#### Hypothesis
+
+Our null and alternative hypotheses for the affect of **rest time** on percent decrease from set 2 to set 3:
+
+$$
+H_0:\alpha_i = 0 \text{ for all } i
+$$
+
+$$
+H_a:\alpha_i \neq 0 \text{ for some }i
+$$
+
+We were able to calculate the percent decrease by the following equation:
+
+$$
+\text{Percent Decline} = {{\text{Set 2 Push-ups } - \text{Set 3 Push-ups}}\over{\text{Set 2 Push-Ups}}} \text{ x }100
+$$
+
+```{r, warning=FALSE, message=FALSE}
+pushaov2 <- aov(log(set2to3) ~ participant + `rest time`, data=push2)
+pander(summary(pushaov2))
+```
+
+Interesting enough the rest time factor for **set2to3** has a far more significant p-value than our **set1to3** column. However the p-value still isn't significant for our level of $\alpha = 0.05$, but it would be significant if we were use $0.1$ instead. So we have insufficient evidence to reject the null hypothesis that the percentage decrease is the same for each rest time. Looking at our block (participant) it appears that participant makes a significant effect on our model. Knowing that it isn't the main focus of our hypothesis we can still say that there is sufficient evidence to prove that each participant has a significant affect on the decrease from set 2 to set 3
+
+#### Assumptions
+
+```{r, warning=FALSE, message=FALSE}
+par(mfrow=c(1,3))
+plot(pushaov2, which=1)
+car::qqPlot(pushaov2$residuals)
+plot(pushaov2$residuals)
+```
+
+**Transformation**: We had problems with normality, so we decided to tranform the anova model using a log() function.
+
+**Constant Variance** : The constant variance assumption is demonstrated by the "Residuals vs Fitted" graph on the left. There doesn't seem to be a megaphone, wedge, or really any other pattern so we can say that our assumption of constant variance is met.
+
+**Normality** : The Normality of our residuals is demonstrated in the middle plot. We are looking for values sitting outside of the band to reject the normality. After transforming the the ANOVA model we can see there is one point barely sitting outside of the band so we are going to deem the normality acceptable and the assumption met.
+
+**Ordered plot** : The ordered plot on the left we are trying to determine if there is a trend of some sort, it seems to be randomized.
+
+## Conclusion
+
+This experiment was initiated to determine whether rest time makes a difference on performance. We decided to test this idea on push ups till failure, being carried out through three sets. We measured the number of repetitions to create percentage metrics, measuring the decrease between each sets, as well as the overall percentage decrease.
+
+We chose percent decrease as to standardize the measurements by individual. In theory our thought process was that the longer the rest period the lesser the decrease in percentage.
+
+We created an Anova, blocking by participant in the study (to get ride of "nuisance" variables) using **set1to3** percent decrease as the response variable. From this we found that `rest time` had a p-value of $0.4296$ which is far from significant, proving that we have insufficient evidence to conclude that rest time affects the percent decrease.
+
+After looking at our visualizations and ANOVA we decided to do a further dive looking at the p-values of `rest time` within our **set1to2** and **set2to3** percentage decrease columns. Where we found:
+
+-   Set 1 to Set 2 ANOVA had a `rest time` p-value of $0.1394$
+
+-   Set 2 to Set 3 ANOVA had a `rest time` p-value of $0.07949$
+
+From these p-values we can determine that for both situations we have insufficient evidence to reject the null hypothesis that `rest time` doesn't have an affect on the percent decrease.
+
+However I think that it is important to note that the the decrease from set 1 to set 2 seemed to have a more significant p-value than the decrease from set 1 to set 3. The decrease from set 2 to set 3 had an even more significant p-value than of those mentioned above. Although neither of these p-values sit lower than our significance level $(\alpha = 0.05)$, we can see that `rest time` appears to have a more significant p-value as we complete more sets.
+
+It would be interesting to continue this experiment by completing more sets to determine if rest time would make a more significant affect on the decrease between sets as more sets are completed.
+
+I would also be interested to created a larger array of rest times getting to a longer time period closer to five minute. As a 30 second rest felt like you barely got a break, and 2 minutes seemed to fly by, I am curious on how this would affect our model.
