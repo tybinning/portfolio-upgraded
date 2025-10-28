@@ -54,11 +54,12 @@ selected_papers: false
           {%- endif %}
 
           <!-- Selected papers -->
-          {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
-            {%- include selected_papers.html %}
-          {%- endif %}
-
+          {% comment %}
+            {% if page.selected_papers -%}
+              <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
+              {%- include selected_papers.html %}
+            {%- endif %}
+          {% comment %}
           <!-- Social -->
           {%- if page.social %}
             <div class="social">
