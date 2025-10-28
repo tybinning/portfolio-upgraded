@@ -1,5 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://tybinning.github.io/portfolio-upgraded/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tybinning.github.io/portfolio-upgraded/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-10-10T15:18:27+00:00</updated><id>https://tybinning.github.io/portfolio-upgraded/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-</subtitle><entry><title type="html">Real Estate Price Prediction Project Discription</title><link href="https://tybinning.github.io/portfolio-upgraded/blog/2025/real-estate-projection-project/" rel="alternate" type="text/html" title="Real Estate Price Prediction Project Discription" /><published>2025-10-10T12:00:21+00:00</published><updated>2025-10-10T12:00:21+00:00</updated><id>https://tybinning.github.io/portfolio-upgraded/blog/2025/real-estate-projection-project</id><content type="html" xml:base="https://tybinning.github.io/portfolio-upgraded/blog/2025/real-estate-projection-project/"><![CDATA[<h1 id="introduction">Introduction</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://tybinning.github.io/portfolio-upgraded/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tybinning.github.io/portfolio-upgraded/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-10-28T11:54:23+00:00</updated><id>https://tybinning.github.io/portfolio-upgraded/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">Real Estate Five Year Price Prediction</title><link href="https://tybinning.github.io/portfolio-upgraded/blog/2025/real-estate-5yr-pred/" rel="alternate" type="text/html" title="Real Estate Five Year Price Prediction" /><published>2025-10-10T12:00:21+00:00</published><updated>2025-10-10T12:00:21+00:00</updated><id>https://tybinning.github.io/portfolio-upgraded/blog/2025/real-estate-5yr-pred</id><content type="html" xml:base="https://tybinning.github.io/portfolio-upgraded/blog/2025/real-estate-5yr-pred/"><![CDATA[<h1 id="introduction">Introduction</h1>
+
+<p>In this project we will be predicting real estate property prices 5 years in the future assisting in our with our investment strategy and aiding in choosing the right property.</p>
+
+<h1 id="data-engineering">Data Engineering</h1>
+
+<p>We will need to collect a variety data from different sources.</p>
+
+<ul>
+  <li>Macro - Economic Data</li>
+  <li>Local Economic Data</li>
+  <li>Spatial Data</li>
+  <li>Crime Rate Data/ Census Data for Targeted Area</li>
+  <li>Consumer Sentiment</li>
+  <li>Local Price Values</li>
+  <li>Global Index?
+    <ul>
+      <li>FHFA House Price Index</li>
+    </ul>
+  </li>
+  <li>Some form of consumer affordability?</li>
+  <li>Demographic information such as salary?</li>
+  <li>Distance to Larger cities.</li>
+</ul>
+
+<h2 id="data-sources">Data Sources</h2>
+<p><strong>Macro- Economic Indicators:</strong></p>
+
+<ul>
+  <li>Fred API has a good source of tracking different indicators</li>
+</ul>
+
+<p><strong>Local Economic Data:</strong></p>
+
+<ul>
+  <li>Local Reports? Information about businesses moving in or leaving?</li>
+  <li>Local unemployment?</li>
+</ul>
+
+<p><strong>Spatial Data:</strong></p>
+
+<ul>
+  <li>Properties nearness to different locations
+    <ul>
+      <li>proximity to schools, stores, malls?</li>
+    </ul>
+  </li>
+  <li>Zoning Laws are important</li>
+</ul>
+
+<p><strong>Crime Rates:</strong></p>
+
+<ul>
+  <li>Can be pulled through publicly available census data.</li>
+</ul>
+
+<h1 id="model-building">Model Building</h1>
+
+<h1 id="training">Training</h1>
+
+<p>#</p>]]></content><author><name></name></author><category term="Real-Estate," /><category term="Spatial," /><category term="Time-Series" /><category term="Real-Estate," /><category term="Spatial," /><category term="Time-Series," /><category term="Prediction" /><summary type="html"><![CDATA[Introduction]]></summary></entry><entry><title type="html">Real Estate Price Prediction Project Discription</title><link href="https://tybinning.github.io/portfolio-upgraded/blog/2025/real-estate-projection-project/" rel="alternate" type="text/html" title="Real Estate Price Prediction Project Discription" /><published>2025-10-10T12:00:21+00:00</published><updated>2025-10-10T12:00:21+00:00</updated><id>https://tybinning.github.io/portfolio-upgraded/blog/2025/real-estate-projection-project</id><content type="html" xml:base="https://tybinning.github.io/portfolio-upgraded/blog/2025/real-estate-projection-project/"><![CDATA[<h1 id="introduction">Introduction</h1>
 
 <p>I have been interesting in Real Estate investing, there is a strategy in real estate investing that combines multiple strategies. Here’s how it works, you buy a property, flip it (repair damages), rent the property out for five years, after 5 years sell and move on to the next property.</p>
 
@@ -37,7 +97,6 @@
           <li>Location</li>
           <li>House Features</li>
           <li>Consumer Sentiment</li>
-          <li></li>
         </ul>
       </li>
     </ul>
@@ -264,4 +323,4 @@ Used largely for automating processes.</p>
 
 <p><img src="assets/img/webhooknode-open-full.png" alt="Webhook Node Testing " title="Webhook Node" /></p>
 
-<p>Looking in the body and message schema from our test, you can see the output from the test meaning you have a successful connection.</p>]]></content><author><name></name></author><category term="Web" /><category term="Scraping," /><category term="Workflow" /><category term="Automation" /><category term="ChangeDetection.io," /><category term="n8n," /><category term="AppRise," /><category term="Webhooks" /><summary type="html"><![CDATA[Connecting changedetection.io to n8n via AppRise style webhooks]]></summary></entry><entry><title type="html">a post with giscus comments</title><link href="https://tybinning.github.io/portfolio-upgraded/blog/2022/giscus-comments/" rel="alternate" type="text/html" title="a post with giscus comments" /><published>2022-12-10T15:59:00+00:00</published><updated>2022-12-10T15:59:00+00:00</updated><id>https://tybinning.github.io/portfolio-upgraded/blog/2022/giscus-comments</id><content type="html" xml:base="https://tybinning.github.io/portfolio-upgraded/blog/2022/giscus-comments/"><![CDATA[<p>This post shows how to add GISCUS comments.</p>]]></content><author><name></name></author><category term="sample-posts" /><category term="external-services" /><summary type="html"><![CDATA[an example of a blog post with giscus comments]]></summary></entry><entry><title type="html">Displaying External Posts on Your al-folio Blog</title><link href="https://tybinning.github.io/portfolio-upgraded/blog/2022/displaying-external-posts-on-your-al-folio-blog/" rel="alternate" type="text/html" title="Displaying External Posts on Your al-folio Blog" /><published>2022-04-23T23:20:09+00:00</published><updated>2022-04-23T23:20:09+00:00</updated><id>https://tybinning.github.io/portfolio-upgraded/blog/2022/displaying-external-posts-on-your-al-folio-blog</id><content type="html" xml:base="https://tybinning.github.io/portfolio-upgraded/blog/2022/displaying-external-posts-on-your-al-folio-blog/"><![CDATA[]]></content><author><name></name></author></entry><entry><title type="html">a post with redirect</title><link href="https://tybinning.github.io/portfolio-upgraded/blog/2022/redirect/" rel="alternate" type="text/html" title="a post with redirect" /><published>2022-02-01T17:39:00+00:00</published><updated>2022-02-01T17:39:00+00:00</updated><id>https://tybinning.github.io/portfolio-upgraded/blog/2022/redirect</id><content type="html" xml:base="https://tybinning.github.io/portfolio-upgraded/blog/2022/redirect/"><![CDATA[<p>Redirecting to another page.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[you can also redirect to assets like pdf]]></summary></entry></feed>
+<p>Looking in the body and message schema from our test, you can see the output from the test meaning you have a successful connection.</p>]]></content><author><name></name></author><category term="Web" /><category term="Scraping," /><category term="Workflow" /><category term="Automation" /><category term="ChangeDetection.io," /><category term="n8n," /><category term="AppRise," /><category term="Webhooks" /><summary type="html"><![CDATA[Connecting changedetection.io to n8n via AppRise style webhooks]]></summary></entry><entry><title type="html">a post with giscus comments</title><link href="https://tybinning.github.io/portfolio-upgraded/blog/2022/giscus-comments/" rel="alternate" type="text/html" title="a post with giscus comments" /><published>2022-12-10T15:59:00+00:00</published><updated>2022-12-10T15:59:00+00:00</updated><id>https://tybinning.github.io/portfolio-upgraded/blog/2022/giscus-comments</id><content type="html" xml:base="https://tybinning.github.io/portfolio-upgraded/blog/2022/giscus-comments/"><![CDATA[<p>This post shows how to add GISCUS comments.</p>]]></content><author><name></name></author><category term="sample-posts" /><category term="external-services" /><summary type="html"><![CDATA[an example of a blog post with giscus comments]]></summary></entry><entry><title type="html">Displaying External Posts on Your al-folio Blog</title><link href="https://tybinning.github.io/portfolio-upgraded/blog/2022/displaying-external-posts-on-your-al-folio-blog/" rel="alternate" type="text/html" title="Displaying External Posts on Your al-folio Blog" /><published>2022-04-23T23:20:09+00:00</published><updated>2022-04-23T23:20:09+00:00</updated><id>https://tybinning.github.io/portfolio-upgraded/blog/2022/displaying-external-posts-on-your-al-folio-blog</id><content type="html" xml:base="https://tybinning.github.io/portfolio-upgraded/blog/2022/displaying-external-posts-on-your-al-folio-blog/"><![CDATA[]]></content><author><name></name></author></entry></feed>
