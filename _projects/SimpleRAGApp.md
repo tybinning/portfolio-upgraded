@@ -96,7 +96,7 @@ class RAG:
         """
         This function:
         1.) Splits text into chunks
-        2.) creates chuunk id
+        2.) creates chunk id
         3.) Encodes Chunk
         4.) Adds Chunk to our Chroma Vector DB and adds meta data relating to its topics.
         """
