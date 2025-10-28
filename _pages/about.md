@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About Me
 permalink: /
 subtitle: tybinning43@gmail.com <a href='https://www.linkedin.com/in/tyler-r-binning/'>LinkedIn</a> <a href='https://github.com/tybinning'>Github</a> 
 
