@@ -35,10 +35,15 @@
       institution: Planck AI
       year: 2025
       description:
-        - Building NLP models with spaCy, including clause tagging and training SpanCat for clause-type recognition 
-        - Applying TF-IDF with Logistic Regression to classify legal contract clauses 
-        - Created a Streamlit interface for uploading and summarizing documents 
-        - Preparing LoRA fine-tuning projects for contract summarization and question answering  
+        - Led full-cycle AI development, from data extraction and cleaning to transformer fine-tuning 
+          (Phi-2, T5) with LoRA and RAG, boosting accuracy and contextual reasoning. 
+        - Built scalable ETL and retrieval systems, converting legal contract data into JSONL and 
+          integrating custom vector stores and prompt templates for efficient document search. 
+        - Deployed models in an interactive Streamlit app, enabling real-time document classification, 
+          clause tagging, and analytics visualization. 
+        - Advanced model performance through research and collaboration, applying TF-IDF and 
+          Logistic Regression benchmarks, optimizing hyperparameters, and standardizing labeling and 
+          evaluation protocols.
     - title: AI Engineering Consultant
       institution: Brigham Young University - Idaho
       year: 2025
