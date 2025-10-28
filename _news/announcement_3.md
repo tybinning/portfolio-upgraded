@@ -2,11 +2,11 @@
 layout: post
 date: 2025-10-10 07:59:00-0400
 title: I completed my internship at Planck AI!
-inline: true
+inline: false
 related_posts: false
 ---
 
-# Experience
+# My Experience at Planck AI 
 
 This internship gave me the opportunity to work through the full pipeline of building multiple machine learning models and deploying the models to an application accessible to users. 
 Throughout my work on this internship I have had opportunities to:
