@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Simple Streamlit Document RAG App
+title: Simple RAG App
 description: Allows users to upload PDF's and ask the chatbot a question about the document.
 img: assets/img/12.jpg
 importance: 1
@@ -9,7 +9,7 @@ category: work
 
 # Introduction
 
-I wanted to build a simple streamlit app that allows me to upload academic pdf's and lets me ask questions about them. However I didn't want to ask a question about one topic and have the RAG pull information from unrelated documents. 
+I wanted to build a simple streamlit app that allows me to upload documents in PDF form and allows me to ask questions about them. However I didn't want to ask a question about one topic and have the RAG pull information from unrelated documents.
 
 Below you can see our simple streamlit app that allows you to discuss different documents that are uploaded.
 
@@ -37,6 +37,11 @@ Upon further inspection you can see tags above the chatbot box. These are meant 
 For our chatbot I decided to use Mistral mainly because this model is open source and provides comparively better conversation styled answers.
 
 For our RAG I used Chroma to build our vector database, when uploading a document our app adds metadata to the chunks detailing the files location within our folders. This allows us to dictate our similarity search by using the filter parameter to limit the documents reviewed.
+
+## Streamlit App
+Inorder to create a MVP I used Streamlit which allows for the creation of simple application within python. 
+
+This allowed for more focus on our model, retreive augemented generation pipeline structure, and simple interface formatting.
 
 ## RAG 
 
