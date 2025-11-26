@@ -46,3 +46,15 @@ where
     - all variables are the same
     - PMT : regular monthly payment
 
+# Specific Securities For Our Strategies
+
+High Yield Dividend Strategy: 
+
+- VYM
+- 
+
+Index Fund Strategy:
+
+- SPY
+- 
+
